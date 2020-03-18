@@ -1,0 +1,16 @@
+*.mac
+*.obj
+*.lst
+*.dep
+*.rprj
+*.BIN
+*.ctx
+*.xdb
+*.rapp
+*.dbi
+*.M51
+*.HEX
+*.AOF
+*.XRF
+*.html
+/80C51

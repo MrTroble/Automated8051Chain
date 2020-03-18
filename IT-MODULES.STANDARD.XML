@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<Table>
+  <Row>
+    <Column>--</Column>
+    <Column>TEST</Column>
+    <Column>D:\PROGRAMS\RIDE\EXAMPLES\TEST.OBJ</Column>
+  </Row>
+  <Row>
+    <Column>--</Column>
+    <Column>C3S</Column>
+    <Column>D:\Programs\Ride\Lib\51\RC51S.LIB</Column>
+  </Row>
+  <Row>
+    <Column>--</Column>
+    <Column>HPD</Column>
+    <Column>D:\Programs\Ride\Lib\51\RC51S.LIB</Column>
+  </Row>
+  <Row>
+    <Column>--</Column>
+    <Column>_C_IDATALEN</Column>
+    <Column>D:\Programs\Ride\Lib\51\RC51S.LIB</Column>
+  </Row>
+</Table>
