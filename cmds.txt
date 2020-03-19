@@ -3,4 +3,4 @@
 "D:\Programs\Ride\Bin\OH51.EXE" "D:\Programs\Ride\Examples\IT.aof" HEXext
 "D:\Programs\Ride\Bin\OH51.EXE" "D:\Programs\Ride\Examples\IT.aof" BIN NOEVENODD
 "D:\Programs\Utilities\FLASH Programming\Static Programmers\Command-Line\FlashUtilCL.exe" FLASHEraseUSB "" 1
-"D:\Programs\Utilities\FLASH Programming\Static Programmers\Command-Line\FlashUtilCL.exe" DownloadUSB -Option R "D:\Programs\Ride\Examples\IT.HEX" "" 0 1
+"D:\Programs\Utilities\FLASH Programming\Static Programmers\Command-Line\FlashUtilCL.exe" DownloadUSB -R "D:\Programs\Ride\Examples\IT.HEX" "" 0 1
