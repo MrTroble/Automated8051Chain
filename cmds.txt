@@ -2,3 +2,4 @@
 "D:\Programs\Ride\Bin\LX51.EXE" "D:\Programs\Ride\Examples\Test.obj" TO("D:\Programs\Ride\Examples\IT.aof") LIBPATH("D:\Programs\Ride\Lib\51")  GENERATEDEPFILE   MAP IX RS(256) RSI(128) CSIZE(65536) XSIZE(65536) DEFN(XSTACKLEN,256) DEFN(TIM1_INIT,E8h) CO(0) DT(0) ID(0) XD(0) BI(0) ABSCODEOFFS(0)   XMLM(No,"D:\Programs\Ride\Examples\IT-modules.Standard.xml")  XMLF(No,8000,"D:\Programs\Ride\Examples\IT-flash.Standard.xml")
 "D:\Programs\Ride\Bin\OH51.EXE" "D:\Programs\Ride\Examples\IT.aof" HEXext
 "D:\Programs\Ride\Bin\OH51.EXE" "D:\Programs\Ride\Examples\IT.aof" BIN NOEVENODD
+"D:\Programs\Utilities\FLASH Programming\Static Programmers\Command-Line\FlashUtilCL.exe" DownloadUSB "D:\Programs\Ride\Examples\IT.HEX" "" 0 1
