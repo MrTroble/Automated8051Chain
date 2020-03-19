@@ -1,6 +1,6 @@
-"D:\Programs\Ride\Bin\RC51.EXE" "D:\Programs\Ride\Examples\Test.c" QUIET GENERATEDEPFILE OJ("D:\Programs\Ride\Examples\Test.obj") PIN("D:\Programs\Ride\Inc;D:\Programs\Ride\Inc\51") PIN("D:\Programs\Ride\\inc\51\SiLabs") NOAM    CD PR("D:\Programs\Ride\Examples\Test.lst")  FP(NOFLOAT) IP  NOIS  UNSIGNEDCHAR ET(CHAR)  PR       PL(60) PW(80) OE(1) OT("7","SPEED")    RB("0")  MAXERR("25") MAXWAR("25") SM    MOD517(NODP8,NOAU)
-"D:\Programs\Ride\Bin\LX51.EXE" "D:\Programs\Ride\Examples\Test.obj" TO("D:\Programs\Ride\Examples\IT.aof") LIBPATH("D:\Programs\Ride\Lib\51")  GENERATEDEPFILE   MAP IX RS(256) RSI(128) CSIZE(65536) XSIZE(65536) DEFN(XSTACKLEN,256) DEFN(TIM1_INIT,E8h) CO(0) DT(0) ID(0) XD(0) BI(0) ABSCODEOFFS(0)   XMLM(No,"D:\Programs\Ride\Examples\IT-modules.Standard.xml")  XMLF(No,8000,"D:\Programs\Ride\Examples\IT-flash.Standard.xml")
-"D:\Programs\Ride\Bin\OH51.EXE" "D:\Programs\Ride\Examples\IT.aof" HEXext
-"D:\Programs\Ride\Bin\OH51.EXE" "D:\Programs\Ride\Examples\IT.aof" BIN NOEVENODD
-"D:\Programs\Utilities\FLASH Programming\Static Programmers\Command-Line\FlashUtilCL.exe" FLASHEraseUSB "" 1
-"D:\Programs\Utilities\FLASH Programming\Static Programmers\Command-Line\FlashUtilCL.exe" DownloadUSB -R "D:\Programs\Ride\Examples\IT.HEX" "" 0 1
+"%ride%\Bin\RC51.EXE" "%Project%\Test.c" QUIET GENERATEDEPFILE OJ("%Project%\Test.obj") PIN("%ride%\Inc;%ride%\Inc\51") PIN("%ride%\\inc\51\SiLabs") NOAM    CD PR("%Project%\Test.lst")  FP(NOFLOAT) IP  NOIS  UNSIGNEDCHAR ET(CHAR)  PR       PL(60) PW(80) OE(1) OT("7","SPEED")    RB("0")  MAXERR("25") MAXWAR("25") SM    MOD517(NODP8,NOAU)
+"%ride%\Bin\LX51.EXE" "%Project%\Test.obj" TO("%Project%\IT.aof") LIBPATH("%ride%\Lib\51")  GENERATEDEPFILE   MAP IX RS(256) RSI(128) CSIZE(65536) XSIZE(65536) DEFN(XSTACKLEN,256) DEFN(TIM1_INIT,E8h) CO(0) DT(0) ID(0) XD(0) BI(0) ABSCODEOFFS(0)   XMLM(No,"%Project%\IT-modules.Standard.xml")  XMLF(No,8000,"%Project%\IT-flash.Standard.xml")
+"%ride%\Bin\OH51.EXE" "%Project%\IT.aof" HEXext
+"%ride%\Bin\OH51.EXE" "%Project%\IT.aof" BIN NOEVENODD
+"%flashcl%FlashUtilCL.exe" FLASHEraseUSB "" 1
+"%flashcl%FlashUtilCL.exe" DownloadUSB -R "%Project%\IT.HEX" "" 0 1
