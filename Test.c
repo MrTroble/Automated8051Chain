@@ -2,6 +2,7 @@
 #include <Einstellungen.h>
 
 typedef unsigned char uint8_t;
+typedef unsigned short uint16_t;
 typedef unsigned int uint32_t;
 
 void rennzeit() {
@@ -26,6 +27,7 @@ void main ()
     Grundeinstellungen();
     TH0 = 0xBD;
     TL0 = 0xC0;
+    TMOD = 0x0;
 }
 
 
