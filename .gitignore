@@ -14,3 +14,4 @@
 *.XRF
 *.html
 /80C51
+.vscode/c_cpp_properties.json
