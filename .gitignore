@@ -2,11 +2,9 @@
 *.obj
 *.lst
 *.dep
-*.rprj
 *.BIN
 *.ctx
 *.xdb
-*.rapp
 *.dbi
 *.M51
 *.HEX
