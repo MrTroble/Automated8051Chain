@@ -28,6 +28,7 @@ void main ()
     TH0 = 0xBD;
     TL0 = 0xC0;
     TMOD = 0x0;
+    D2 = 1;
 }
 
 
