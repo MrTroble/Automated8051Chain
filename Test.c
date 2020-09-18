@@ -31,18 +31,22 @@ void overflow() interrupt(1) {
         P1 |= (!(image[i][j] & 1)) << j;
     }
     j++;
-    if (j == 8) j = 0;
+    if (j == 8)
+        j = 0;
+
+    TH0 = 0xF8;
+    TL0 = 0x4B;
 }
 
 void main() {
     Grundeinstellungen();
 
-    TH0 = 0;
-    TL0 = 0;
+    TH0 = 0xF8;
+    TL0 = 0x4B;
 
     EA = 1;
     ET0 = 1;
-    TMOD = 2;
+    TMOD = 1;
     TR0 = 1;
 
     P0 = 0;
