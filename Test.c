@@ -9,10 +9,13 @@ typedef unsigned int uint32_t;
 #define interrupt(x)
 #endif
 
+void overflow() {
+}
+
 void main() {
     Grundeinstellungen();
 
-    P0 = 2;
+    P0 = 1;
     P1 = 0;
 
     while (1) continue;
