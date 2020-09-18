@@ -54,7 +54,7 @@ void main() {
 
     for (i = 0; i < EXTENT; i++) {
         for (j = 0; j < EXTENT; j++) {
-            P1 = !(image[i][j] & 1);
+            P1 |= (!(image[i][j] & 1)) << j;
         }
     }
 
