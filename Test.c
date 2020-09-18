@@ -14,6 +14,10 @@ typedef unsigned int uint32_t;
 uint8_t counter = 0;
 
 void next() {
+    if (P0 == 128) {
+        P0 = 1;
+        return;
+    }
     P0 <<= 1;
 }
 
