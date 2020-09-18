@@ -10,7 +10,7 @@ typedef unsigned int uint32_t;
 #endif
 
 void overflow() interrupt(1) {
-    P0++;
+    P0 >> 1;
     TH0 = 0;
     TL0 = 0;
 }
