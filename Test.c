@@ -11,21 +11,22 @@ typedef unsigned int uint32_t;
 
 #define MAX_CYCLES 8
 
-uint8_t counter = 0;
+uint8_t counter = 0, i = 0, j = 0;
+
+#define EXTENT 8
+
+uint8_t image[EXTENT][EXTENT] = {
+    {0, 0, 0, 0, 0, 0, 1, 1},
+    {0, 0, 0, 0, 0, 0, 1, 1},
+    {0, 0, 0, 0, 0, 0, 1, 1},
+    {0, 0, 0, 0, 0, 0, 1, 1},
+    {0, 0, 0, 0, 0, 0, 1, 1},
+    {0, 0, 0, 0, 0, 0, 1, 1},
+    {0, 0, 0, 0, 0, 0, 1, 1},
+    {0, 0, 0, 0, 0, 0, 1, 1},
+};
 
 void next() {
-    if (P0 == 128) {
-        P0 = 1;
-        return;
-    }
-    P0 <<= 1;
-
-    if (P1 & 128 == 128) {
-        P1 <<= 1;
-        P1++;
-    } else {
-        P1 <<= 1;
-    }
 }
 
 void overflow() interrupt(1) {
@@ -47,10 +48,15 @@ void main() {
     EA = 1;
     ET0 = 1;
     TMOD = 1;
-    TR0 = 1;
+    TR0 = 0;
 
-    P0 = 1;
-    P1 = 7;
+    for (i = 0; i < EXTENT; i++) {
+        for (j = 0; j < EXTENT; j++) {
+            P0 = image[i][j];
+            P1 = !(image[i][j] & 1);
+        }
+    }
 
-    while (1) continue;
+    while (1) {
+    };
 }
