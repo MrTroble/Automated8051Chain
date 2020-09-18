@@ -26,8 +26,9 @@ uint8_t image[EXTENT][EXTENT] = {
 
 void overflow() interrupt(1) {
     P1 = ~(1 << j);
+    P0 = 0;
     for (i = 0; i < EXTENT; i++) {
-        P0 |= image[j][i] << i;
+        P0 |= (image[j][i] & 1) << i;
     }
     j++;
     if (j == 8)
