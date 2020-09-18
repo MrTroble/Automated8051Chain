@@ -20,11 +20,12 @@ void next() {
     }
     P0 <<= 1;
 
-    if (P1 == 0b11100000) {
-        P1 = 7;
-        return;
+    if (P1 & 128 == 128) {
+        P1 <<= 1;
+        P1++;
+    } else {
+        P1 <<= 1;
     }
-    P1 <<= 1;
 }
 
 void overflow() interrupt(1) {
