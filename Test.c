@@ -9,11 +9,17 @@ typedef unsigned int uint32_t;
 #define interrupt(x)
 #endif
 
-void overflow() {
+void overflow() interrupt(1) {
+    P0++;
+    TH0 = 0xFF;
+    TL0 = 0xFF;
 }
 
 void main() {
     Grundeinstellungen();
+
+    TH0 = 0xFF;
+    TL0 = 0xFF;
 
     EA = 1;
     ET0 = 1;
