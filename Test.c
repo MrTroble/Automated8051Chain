@@ -51,7 +51,7 @@ void main() {
     EA = 1;
     ET0 = 1;
     TMOD = 1;
-    TR0 = 0;
+    TR0 = 1;
 
     P0 = 0xFF;
 
