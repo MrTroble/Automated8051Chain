@@ -32,8 +32,6 @@ void overflow() interrupt(1) {
         P1 |= (!(image[i][j] & 1)) << j;
     }
     if (j == 8) j = 0;
-    TH0 = 0;
-    TL0 = 0;
 }
 
 void main() {
@@ -44,7 +42,7 @@ void main() {
 
     EA = 1;
     ET0 = 1;
-    TMOD = 1;
+    TMOD = 2;
     TR0 = 1;
 
     P0 = 0;
