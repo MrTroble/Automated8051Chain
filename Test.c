@@ -11,15 +11,16 @@ typedef unsigned int uint32_t;
 
 void overflow() interrupt(1) {
     P0++;
-    TH0 = 0xFF;
-    TL0 = 0xFF;
+    P2_2 != P2_2;
+    TH0 = 0;
+    TL0 = 0;
 }
 
 void main() {
     Grundeinstellungen();
 
-    TH0 = 0xFF;
-    TL0 = 0xFF;
+    TH0 = 0;
+    TL0 = 0;
 
     EA = 1;
     ET0 = 1;
