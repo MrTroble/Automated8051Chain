@@ -12,7 +12,7 @@ typedef unsigned int uint32_t;
 void main() {
     Grundeinstellungen();
 
-    P0 = 1;
+    P0 = 2;
     P1 = 1;
 
     while (1) continue;
