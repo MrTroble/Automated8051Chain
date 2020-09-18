@@ -9,8 +9,6 @@ typedef unsigned int uint32_t;
 #define interrupt(x)
 #endif
 
-#define MAX_CYCLES 8
-
 uint8_t counter = 0, i = 0, j = 0;
 
 #define EXTENT 8
@@ -26,18 +24,12 @@ uint8_t image[EXTENT][EXTENT] = {
     {0, 0, 0, 0, 0, 0, 1, 1},
 };
 
-void next() {
-}
-
 void overflow() interrupt(1) {
     j++;
-    if (j == MAX_CYCLES) {
-        j = 0;
-        P1 = 0;
-        P0 = 1 << j;
-        for (i = 0; i < EXTENT; i++) {
-            P1 |= (!(image[i][j] & 1)) << j;
-        }
+    P1 = 0;
+    P0 = 1 << j;
+    for (i = 0; i < EXTENT; i++) {
+        P1 |= (!(image[i][j] & 1)) << j;
     }
     TH0 = 0;
     TL0 = 0;
