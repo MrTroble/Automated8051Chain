@@ -15,7 +15,6 @@ uint8_t counter = 0;
 
 void next() {
     P0 >>= 1;
-    P0++;
 }
 
 void overflow() interrupt(1) {
@@ -39,7 +38,7 @@ void main() {
     TMOD = 1;
     TR0 = 1;
 
-    P0 = 0;
+    P0 = 1;
     P1 = 0;
 
     while (1) continue;
