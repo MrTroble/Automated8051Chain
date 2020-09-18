@@ -14,11 +14,12 @@ typedef unsigned int uint32_t;
 uint8_t counter = 0;
 
 void next() {
-    P0++;
     P0 >>= 1;
+    P0++;
 }
 
 void overflow() interrupt(1) {
+    counter++;
     if (counter == MAX_CYCLES) {
         counter = 0;
         next();
