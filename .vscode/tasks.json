@@ -9,7 +9,11 @@
             "command": "python build.py",
             "problemMatcher": [
                 "$eslint-compact"
-            ]
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
