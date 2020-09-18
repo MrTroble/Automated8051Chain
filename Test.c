@@ -5,13 +5,12 @@ typedef unsigned char uint8_t;
 typedef unsigned short uint16_t;
 typedef unsigned int uint32_t;
 
-#if 0
+#ifdef VSCODE
 #define interrupt(x)
 #endif
 
 void overflow() interrupt(1) {
     P0++;
-    P2_2 != P2_2;
     TH0 = 0;
     TL0 = 0;
 }
