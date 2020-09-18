@@ -30,10 +30,13 @@ void next() {
 }
 
 void overflow() interrupt(1) {
-    counter++;
-    if (counter == MAX_CYCLES) {
-        counter = 0;
-        next();
+    j++;
+    if (j == MAX_CYCLES) {
+        j = 0;
+        for (i = 0; i < EXTENT; i++) {
+            P0 |= (image[i][j] & 1) << i;
+            P1 |= (!(image[i][j] & 1)) << j;
+        }
     }
     TH0 = 0;
     TL0 = 0;
@@ -51,12 +54,6 @@ void main() {
     TR0 = 0;
 
     P0 = 0xFF;
-
-    for (i = 0; i < EXTENT; i++) {
-        for (j = 0; j < EXTENT; j++) {
-            P1 |= (!(image[i][j] & 1)) << j;
-        }
-    }
 
     while (1) {
     };
