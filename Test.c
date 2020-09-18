@@ -12,8 +12,8 @@ typedef unsigned int uint32_t;
 void main() {
     Grundeinstellungen();
 
-    P0 = 0xF;
-    P1 = 0xF;
+    P0 = 1;
+    P1 = 1;
 
     while (1) continue;
 }
