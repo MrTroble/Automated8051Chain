@@ -31,6 +31,7 @@ void overflow() interrupt(1) {
     for (i = 0; i < EXTENT; i++) {
         P1 |= (!(image[i][j] & 1)) << j;
     }
+    if (j == 8) j = 0;
     TH0 = 0;
     TL0 = 0;
 }
