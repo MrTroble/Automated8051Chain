@@ -20,8 +20,8 @@ void next() {
     }
     P0 <<= 1;
 
-    if (P1 == 0b11000000) {
-        P1 = 3;
+    if (P1 == 0b11100000) {
+        P1 = 7;
         return;
     }
     P1 <<= 1;
@@ -49,7 +49,7 @@ void main() {
     TR0 = 1;
 
     P0 = 1;
-    P1 = 3;
+    P1 = 7;
 
     while (1) continue;
 }
