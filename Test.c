@@ -50,9 +50,10 @@ void main() {
     TMOD = 1;
     TR0 = 0;
 
+    P0 = 0xFF;
+
     for (i = 0; i < EXTENT; i++) {
         for (j = 0; j < EXTENT; j++) {
-            P0 = image[i][j];
             P1 = !(image[i][j] & 1);
         }
     }
