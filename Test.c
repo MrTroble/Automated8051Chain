@@ -19,6 +19,12 @@ void next() {
         return;
     }
     P0 <<= 1;
+
+    if (P1 == 128) {
+        P1 = 1;
+        return;
+    }
+    P1 <<= 1;
 }
 
 void overflow() interrupt(1) {
@@ -43,7 +49,7 @@ void main() {
     TR0 = 1;
 
     P0 = 1;
-    P1 = 0;
+    P1 = 1;
 
     while (1) continue;
 }
