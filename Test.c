@@ -15,7 +15,12 @@ void overflow() {
 void main() {
     Grundeinstellungen();
 
-    P0 = 3;
+    EA = 1;
+    ET0 = 1;
+    TMOD = 1;
+    TR0 = 1;
+
+    P0 = 0;
     P1 = 0;
 
     while (1) continue;
