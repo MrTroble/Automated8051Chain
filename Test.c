@@ -13,7 +13,7 @@ void main() {
     Grundeinstellungen();
 
     P0 = 2;
-    P1 = 1;
+    P1 = 0;
 
     while (1) continue;
 }
