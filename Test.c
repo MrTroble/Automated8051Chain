@@ -12,7 +12,7 @@ uint8_t counter = 0;
 
 // 2**16 - (10**6 % 2**16) = 48576 [BDC0]
 // 10**6 / 2**16 ~= 16
-void overflow() interrupt 1 {
+void overflow() interrupt(1) {
     if ((++counter) < 17)
         return;
     counter = 0;
