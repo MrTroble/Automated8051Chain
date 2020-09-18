@@ -9,8 +9,18 @@ typedef unsigned int uint32_t;
 #define interrupt(x)
 #endif
 
+#define MAX_CYCLES 8
+
+uint8_t counter = 0;
+
+void next() {
+}
+
 void overflow() interrupt(1) {
-    P0 >>= 1;
+    if (counter == MAX_CYCLES) {
+        counter = 0;
+        next();
+    }
     TH0 = 0;
     TL0 = 0;
 }
