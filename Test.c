@@ -9,7 +9,7 @@ typedef unsigned int uint32_t;
 #define interrupt(x)
 #endif
 
-#define MAX_CYCLES 2
+#define MAX_CYCLES 8
 
 uint8_t counter = 0;
 
