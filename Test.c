@@ -13,7 +13,7 @@ void main() {
     Grundeinstellungen();
 
     P4 = 0;
-    P3 = 1;
+    P3 = 3;
 
     while (1) {
         P4 = P3;
