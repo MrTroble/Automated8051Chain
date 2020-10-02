@@ -44,7 +44,7 @@ void main() {
             P4 |= 15;
             sport(TABLE[i], 0);
             for (x = 0; x < 3; x++) {
-                taster[i][x] = port(TABLE[x + 4]);
+                taster[i][x] = port(TABLE[x + 3]);
                 P1 = taster[i][x] << x;
             }
         }
