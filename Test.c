@@ -78,7 +78,7 @@ void main() {
         process();
         for (i = 0; i < 4; i++) {
             for (x = 0; x < 3; x++) {
-                while (!taster[i][x]) continue;
+                while (taster[i][x]) continue;
             }
         }
     }
