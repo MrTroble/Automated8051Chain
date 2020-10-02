@@ -38,7 +38,7 @@ void process() {
     for (i = 0; i < 4; i++) {
         for (x = 0; x < 3; x++) {
             if (!taster[i][x]) {
-                P1 = x + (3 * i);
+                P1 = x + (3 * i) + 1;
             }
         }
     }
