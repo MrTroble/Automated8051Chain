@@ -44,7 +44,10 @@ void process() {
 
     if (port(POR8)) {
         stage++;
-        if (wrong) return;
+        if (wrong) {
+            P1 = 128;
+            return;
+        }
         if (stage == 4) {
             P1 = 0xFF;
         }
