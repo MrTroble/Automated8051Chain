@@ -39,6 +39,7 @@ void process() {
         stage = 0;
         P1 = 0;
         wrong = 0;
+        return;
     }
 
     if (port(POR8)) {
