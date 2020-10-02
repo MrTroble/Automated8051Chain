@@ -37,12 +37,15 @@ uint8_t i = 0, x = 0;
 void main() {
     Grundeinstellungen();
 
+    P1 = 0;
+
     while (1) {
         for (i = 0; i < 4; i++) {
             P4 |= 15;
             sport(TABLE[i], 0);
             for (x = 0; x < 3; x++) {
                 taster[i][x] = port(TABLE[x + 4]);
+                P1 = taster[i][x] << x;
             }
         }
     }
