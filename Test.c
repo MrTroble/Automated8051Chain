@@ -32,32 +32,14 @@ inline uint8_t port(const uint32_t port) {
 }
 
 uint8_t taster[4][3];
-uint8_t i = 0, x = 0, stage = 0, wrong = 0;
+uint8_t i = 0, x = 0, num = 0;
 
 void process() {
-    if (!taster[3][2]) {
-        stage = 0;
-        P1 = 0;
-        wrong = 0;
-        return;
-    }
-
-    if (port(POR8)) {
-        stage++;
-        if (wrong) {
-            P1 = 128;
-            return;
-        }
-        if (stage == 4) {
-            P1 = 0xFF;
-        }
-        P1 = stage;
-        if (stage == 1 && taster[0][0]) {
-            wrong = 1;
-        } else if (stage == 2 && taster[1][2]) {
-            wrong = 1;
-        } else if (stage == 3 && taster[0][2]) {
-            wrong = 1;
+    for (i = 0; i < 4; i++) {
+        for (x = 0; x < 3; x++) {
+            if (!taster[i][x]) {
+                P1 = x + (3 * i);
+            }
         }
     }
 }
@@ -76,10 +58,5 @@ void main() {
             }
         }
         process();
-        for (i = 0; i < 4; i++) {
-            for (x = 0; x < 3; x++) {
-                while (taster[i][x]) continue;
-            }
-        }
     }
 }

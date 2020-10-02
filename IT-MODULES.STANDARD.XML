@@ -7,12 +7,17 @@
   </Row>
   <Row>
     <Column>--</Column>
-    <Column>C3S</Column>
+    <Column>C1S</Column>
     <Column>C:\Raisonance\Ride\\Lib\51\RC51S.LIB</Column>
   </Row>
   <Row>
     <Column>--</Column>
     <Column>HPD</Column>
+    <Column>C:\Raisonance\Ride\\Lib\51\RC51S.LIB</Column>
+  </Row>
+  <Row>
+    <Column>--</Column>
+    <Column>_C_INITD</Column>
     <Column>C:\Raisonance\Ride\\Lib\51\RC51S.LIB</Column>
   </Row>
   <Row>
