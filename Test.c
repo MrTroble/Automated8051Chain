@@ -45,7 +45,7 @@ void process() {
     if (port(POR8)) {
         stage++;
         if (wrong) {
-            P1 = 128;
+            P1 = 0;
             return;
         }
         if (stage == 4) {
@@ -59,7 +59,6 @@ void process() {
         } else if (stage == 3 && taster[0][2]) {
             wrong = 1;
         }
-        while (port(POR8)) continue;
     }
 }
 
@@ -77,5 +76,10 @@ void main() {
             }
         }
         process();
+        for (i = 0; i < 4; i++) {
+            for (x = 0; x < 3; x++) {
+                while (!taster[i][x]) continue;
+            }
+        }
     }
 }
