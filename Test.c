@@ -38,12 +38,15 @@ void process() {
     if (!taster[3][2]) {
         stage = 0;
         P1 = 0;
+        wrong = 0;
     }
 
     if (port(POR8)) {
         stage++;
         if (wrong) return;
-        if (stage == 4) P1 = 0xFF;
+        if (stage == 4) {
+            P1 = 0xFF;
+        }
         P1 = stage;
         if (stage == 1 && taster[0][0]) {
             wrong = 1;
