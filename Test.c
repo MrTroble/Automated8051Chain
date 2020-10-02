@@ -32,7 +32,29 @@ inline uint8_t port(const uint32_t port) {
 }
 
 uint8_t taster[4][3];
-uint8_t i = 0, x = 0;
+uint8_t i = 0, x = 0, stage = 0, wrong = 0;
+
+void proccess() {
+    if (!taster[3][2]) {
+        stage = 0;
+        P1 = 0;
+    }
+
+    if (port(POR8)) {
+        stage++;
+        if (wrong) return;
+        if (stage == 4) P1 = 0xFF;
+        P1 = stage;
+        if (stage == 1 && taster[0][0]) {
+            wrong = 1;
+        } else if (stage == 2 && taster[1][2]) {
+            wrong = 1;
+        } else if (stage == 3 && taster[0][2]) {
+            wrong = 1;
+        }
+        while (port(POR8)) continue;
+    }
+}
 
 void main() {
     Grundeinstellungen();
@@ -46,9 +68,7 @@ void main() {
             for (x = 0; x < 3; x++) {
                 taster[i][x] = port(TABLE[x + 4]);
             }
-            P1_0 = taster[1][0];
-            P1_1 = taster[1][1];
-            P1_2 = taster[1][2];
         }
+        process();
     }
 }
