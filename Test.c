@@ -9,47 +9,10 @@ typedef unsigned int uint32_t;
 #define interrupt(x)
 #endif
 
-uint8_t counter = 0, i = 0, j = 0;
-
-#define EXTENT 8
-
-uint8_t image[EXTENT][EXTENT] = {
-    {1, 0, 1, 0, 0, 0, 1, 0},
-    {1, 1, 1, 0, 0, 0, 1, 0},
-    {1, 0, 1, 0, 0, 0, 1, 0},
-    {0, 0, 0, 0, 0, 0, 0, 0},
-    {1, 0, 0, 0, 0, 1, 1, 1},
-    {1, 0, 0, 0, 0, 1, 0, 1},
-    {1, 0, 0, 0, 0, 1, 0, 1},
-    {1, 1, 1, 0, 0, 1, 1, 1},
-};
-
-void overflow() interrupt(1) {
-    P1 = ~(1 << j);
-    P0 = 0;
-    for (i = 0; i < EXTENT; i++) {
-        P0 |= (image[j][i] & 1) << i;
-    }
-    j++;
-    if (j == 8)
-        j = 0;
-
-    TH0 = 0xF8;
-    TL0 = 0x4B;
-}
-
 void main() {
     Grundeinstellungen();
 
-    TH0 = 0xF8;
-    TL0 = 0x4B;
-
-    EA = 1;
-    ET0 = 1;
-    TMOD = 1;
-    TR0 = 1;
-
-    P0 = 0;
-
-    while (1) continue;
+    while (1) {
+        P1_0 = P4 & 1;
+    }
 }
