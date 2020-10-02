@@ -34,7 +34,7 @@ inline uint8_t port(const uint32_t port) {
 uint8_t taster[4][3];
 uint8_t i = 0, x = 0, stage = 0, wrong = 0;
 
-void proccess() {
+void process() {
     if (!taster[3][2]) {
         stage = 0;
         P1 = 0;
